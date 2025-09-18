@@ -1,0 +1,179 @@
+<section class="bckground-color">
+  <div class="container h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-lg-10 col-xl-9">
+        <div class="card text-black shadow-sm" style="border-radius: 20px">
+          <div class="card-body p-4 p-md-5">
+            <div class="row justify-content-center align-items-center">
+              <!-- Form Column -->
+              <div class="col-md-10 col-lg-6">
+                <h3 class="text-center fw-bold mb-4 text-success">Sign Up</h3>
+
+                <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+                  <!-- Full Name -->
+                  <div class="form-outline mb-3">
+                    <label class="form-label" for="fullName">Full Name</label>
+                    <input
+                      type="text"
+                      id="fullName"
+                      formControlName="fullName"
+                      class="form-control"
+                      [ngClass]="{
+                        'is-invalid': f['fullName'].touched && f['fullName'].invalid,
+                        'is-valid': f['fullName'].valid
+                      }"
+                    />
+                    <div class="invalid-feedback" *ngIf="f['fullName'].errors?.['required']">
+                      Full Name is required.
+                    </div>
+                    <div class="invalid-feedback" *ngIf="f['fullName'].errors?.['minlength']">
+                      Full Name must be at least 5 characters.
+                    </div>
+                  </div>
+
+
+                  <!-- Email -->
+                  <div class="form-outline mb-3">
+                    <label class="form-label" for="email">Email</label>
+                    <input
+                      type="email"
+                      id="email"
+                      formControlName="email"
+                      class="form-control"
+                      [ngClass]="{
+                        'is-invalid': f['email'].touched && f['email'].invalid,
+                        'is-valid': f['email'].valid
+                      }"
+                    />
+                    <div class="invalid-feedback" *ngIf="f['email'].errors?.['required']">
+                      Email is required.
+                    </div>
+                    <div class="invalid-feedback" *ngIf="f['email'].errors?.['email']">
+                      Invalid email format.
+                    </div>
+                    <div class="invalid-feedback" *ngIf="f['email'].errors?.['pattern']">
+                      Email does not match pattern.
+                    </div>
+                  </div>
+
+
+                  <!-- Mobile -->
+                  <div class="form-outline mb-3">
+                    <label class="form-label" for="mobiles">Mobile</label>
+                    <input
+                      type="text"
+                      id="mobiles"
+                      formControlName="mobile"
+                      class="form-control"
+                      [ngClass]="{
+                        'is-invalid': f['mobile'].touched && f['mobile'].invalid,
+                        'is-valid': f['mobile'].valid
+                      }"
+                    />
+                    <div class="invalid-feedback" *ngIf="f['mobile'].errors?.['required']">
+                      Mobile number is required.
+                    </div>
+                    <div class="invalid-feedback" *ngIf="f['mobile'].errors?.['pattern']">
+                      Invalid mobile number format.
+                    </div>
+                  </div>
+
+
+                  <!-- Password -->
+                  <div class="form-outline mb-3">
+                    <label class="form-label" for="password">Password</label>
+                    <input
+                      type="password"
+                      id="password"
+                      formControlName="password"
+                      class="form-control"
+                      [ngClass]="{
+                        'is-invalid': f['password'].touched && f['password'].invalid,
+                        'is-valid': f['password'].valid
+                      }"
+                    />
+                    <div class="invalid-feedback" *ngIf="f['password'].errors?.['required']">
+                      Password is required.
+                    </div>
+                    <div class="invalid-feedback" *ngIf="f['password'].errors?.['minlength']">
+                      Password must be at least 6 characters.
+                    </div>
+                  </div>
+
+
+                  <!-- Confirm Password -->
+                  <div class="form-outline mb-3">
+                    <label class="form-label" for="confirmPassword">Confirm Password</label>
+                    <input
+                      type="password"
+                      id="confirmPassword"
+                      formControlName="confirmPassword"
+                      class="form-control"
+                      [ngClass]="{
+                        'is-invalid': (f['confirmPassword'].touched && f['confirmPassword'].invalid) || registerForm.errors?.['mismatch'],
+                        'is-valid': f['confirmPassword'].valid && !registerForm.errors?.['mismatch']
+                      }"
+                    />
+                    <div class="invalid-feedback" *ngIf="f['confirmPassword'].errors?.['required']">
+                      Confirm Password is required.
+                    </div>
+                    <div class="invalid-feedback" *ngIf="registerForm.errors?.['mismatch']">
+                      Passwords do not match.
+                    </div>
+                  </div>
+
+
+                  <!-- Terms -->
+                  <div class="form-check mb-3 text-center">
+                    <input class="form-check-input me-2" type="checkbox" id="terms" />
+                    <label class="form-check-label" for="terms">
+                      I agree to all <a href="#!" class="text-primary">Terms of Service</a>
+                    </label>
+                  </div>
+
+
+                  <!-- Buttons -->
+                  <div class="d-flex justify-content-center">
+                    <button type="submit" class="btn btn-success btn-md px-4 me-2 button-color">Register</button>
+                    <button
+                      type="button"
+                      class="btn btn-secondary btn-md px-4"
+                      (click)="resetForm()"
+                    >
+                      Reset
+                    </button>
+                  </div>
+                </form>
+
+
+                <!-- Display submitted data -->
+                <div *ngIf="submittedData" class="card mt-4 submitted-card shadow-sm">
+                  <div class="card-body">
+                    <h4 class="card-title text-center mb-3">Submitted Data</h4>
+                    <hr />
+                    <p><strong>Full Name:</strong> {{ submittedData.fullName }}</p>
+                    <p><strong>Email:</strong> {{ submittedData.email }}</p>
+                    <p><strong>Mobile:</strong> {{ submittedData.mobile }}</p>
+                    <p><strong>Password:</strong> {{ submittedData.password }}</p>
+                  </div>
+                </div>
+              </div>
+
+
+              <div
+                class="col-md-10 col-lg-6 d-flex justify-content-center align-items-center mt-4 mt-lg-0"
+              >
+                <img
+                  src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/draw1.webp"
+                  class="img-fluid rounded"
+                  alt="Registration image"
+                  style="max-height: 300px"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
