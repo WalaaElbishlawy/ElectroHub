@@ -62,12 +62,12 @@ Clean architecture and reusable services.
 
     npm install
 
-  ## Demo
-  
-
 - 3- Run the development server:
 
     ng serve -o
+  
 - 4- Open the app in your browser:
 
    http://localhost:4200/
+
+  ## Demo
