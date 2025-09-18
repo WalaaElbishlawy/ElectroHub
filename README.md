@@ -1,59 +1,52 @@
-# Day2
+#  🛒 ElectroHub – Angular 20 E-Commerce App
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.1.
+ElectroHub is a responsive Angular 20 e-commerce application.
+It allows users to browse products, search and filter by category, add products to the cart, update cart quantities, and manage authentication (login/signup).
 
-## Development server
+## 🚀 Features
 
-To start a local development server, run:
+### Responsive Design – Works seamlessly on desktop, tablet, and mobile.
 
-```bash
-ng serve
-```
+### Product Management
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+- View a list of products.
 
-## Code scaffolding
+- Search products by name.
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+- Filter products by category.
 
-```bash
-ng generate component component-name
-```
+### Shopping Cart
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+- Add products to the cart.
 
-```bash
-ng generate --help
-```
+- Increase/decrease item quantity.
 
-## Building
+- View total price in cart.
 
-To build the project run:
+### Authentication
 
-```bash
-ng build
-```
+- Login with email & password.
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+- Register a new account (signup).
 
-## Running unit tests
+## Modern Angular 20
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+Standalone components.
 
-```bash
-ng test
-```
+Reactive forms with validation.
 
-## Running end-to-end tests
+Clean architecture and reusable services.
 
-For end-to-end (e2e) testing, run:
+## 🛠️ Tech Stack
 
-```bash
-ng e2e
-```
+- Angular 20 (Standalone components)
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+- TypeScript
 
-## Additional Resources
+- Bootstrap 5.3 (for responsive UI)
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+- Reactive Forms
+
+- Angular Router
+
+- Html & Css
