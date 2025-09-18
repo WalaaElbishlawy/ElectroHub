@@ -50,3 +50,10 @@ Clean architecture and reusable services.
 - Angular Router
 
 - Html & Css
+
+## ⚙️ Installation & Setup
+
+- Clone the repository:
+
+   git clone https://github.com/your-username/ElectroHub.git
+   cd ElectroHub
