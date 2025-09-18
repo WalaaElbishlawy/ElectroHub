@@ -53,7 +53,21 @@ Clean architecture and reusable services.
 
 ## ⚙️ Installation & Setup
 
-- Clone the repository:
+- 1- Clone the repository:
 
    git clone https://github.com/your-username/ElectroHub.git
    cd ElectroHub
+  
+- 2- Install dependencies:
+
+    npm install
+
+  ## Demo
+  
+
+- 3- Run the development server:
+
+    ng serve -o
+- 4- Open the app in your browser:
+
+   http://localhost:4200/
