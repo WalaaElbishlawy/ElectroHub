@@ -1,59 +1,82 @@
-# Day2
+# 🛒 ElectroHub – Angular 20 E-Commerce App
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.1.
+ElectroHub is a modern and responsive Angular 20 e-commerce application. It allows users to browse products, search and filter by category, manage a shopping cart with live updates, and handle authentication (login/signup) with API integration.
 
-## Development server
+## 🚀 Features
+🌐 Product Management
 
-To start a local development server, run:
+- View a list of products from the API.
 
-```bash
-ng serve
-```
+- Search products by name.
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+- Filter products by category.
 
-## Code scaffolding
+🛒 Shopping Cart
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+- Add products to the cart.
 
-```bash
-ng generate component component-name
-```
+- Increase or decrease item quantity.
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+- Remove items from the cart.
 
-```bash
-ng generate --help
-```
+- View total price dynamically.
 
-## Building
+🔑 Authentication
 
-To build the project run:
+- Login with email & password (API-based).
 
-```bash
-ng build
-```
+- Register a new account (signup).
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+- Secure authentication handling.
 
-## Running unit tests
+⚡ Modern Angular 20
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+- Standalone components.
 
-```bash
-ng test
-```
+- Reactive forms with validation.
 
-## Running end-to-end tests
+- Clean architecture and reusable services.
 
-For end-to-end (e2e) testing, run:
+## 🛠️ Tech Stack
 
-```bash
-ng e2e
-```
+- Angular 20 (Standalone Components)
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+- TypeScript
 
-## Additional Resources
+- Bootstrap 5.3 (Responsive UI)
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+- Reactive Forms
+
+- Angular Router
+
+- HTML & CSS
+
+## ⚙️ Installation & Setup
+
+## Clone the repository:
+
+- git clone https://github.com/WalaaElbishlawy/ElectroHub.git
+cd ElectroHub
+
+
+## Install dependencies:
+
+- npm install
+
+
+## Run the development server:
+
+- ng serve -o
+
+
+## Open the app in your browser:
+
+- http://localhost:4200/
+
+## 🎥 Demo
+
+- 🔗 Watch the demo on YouTube
+
+📌 About
+
+ElectroHub is a responsive e-commerce web application built with Angular 20, featuring API integration, cart management, and authentication for a complete shopping experience.
