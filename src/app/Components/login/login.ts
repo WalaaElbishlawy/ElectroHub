@@ -1,8 +1,14 @@
 import { CommonModule } from '@angular/common';
+<<<<<<< HEAD
 import { Component, inject, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Router, RouterModule } from '@angular/router';
 import { Auth } from '../../Services/auth';
+=======
+import { Component } from '@angular/core';
+import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { RouterModule } from '@angular/router';
+>>>>>>> cfe63487fd06b2c2702019a4c9f6dcbaf7096945
 
 @Component({
   selector: 'app-login',
@@ -10,6 +16,7 @@ import { Auth } from '../../Services/auth';
   templateUrl: './login.html',
   styleUrl: './login.css'
 })
+<<<<<<< HEAD
 export class Login implements OnInit{
 
   loginForm!: FormGroup;
@@ -47,10 +54,44 @@ export class Login implements OnInit{
         this.errorMessage = 'Invalid username or password';
         }
      });
+=======
+export class Login {
+
+  loginForm: FormGroup;
+  submittedData: any = null;
+
+  constructor(private fb: FormBuilder) {
+    this.loginForm = this.fb.group
+      (
+        {
+          email: ['', [Validators.required, Validators.email, Validators.pattern(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/)]],
+          password: ['', [Validators.required, Validators.minLength(6)]],
+          remember: [false]
+        }
+      )
+  }
+
+  resetForm() {
+    this.loginForm.reset();
+    this.submittedData = null;
+  }
+
+  onSubmit() {
+    if (this.loginForm.valid) {
+      this.submittedData = this.loginForm.value;
+      this.loginForm.reset();
+    }
+    else {
+      this.loginForm.markAllAsTouched();
+    }
+>>>>>>> cfe63487fd06b2c2702019a4c9f6dcbaf7096945
   }
 
   get f() {
     return this.loginForm.controls;
   }
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> cfe63487fd06b2c2702019a4c9f6dcbaf7096945

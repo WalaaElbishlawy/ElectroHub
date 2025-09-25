@@ -2,6 +2,10 @@ import { Cartservice } from './../../Services/cartservice';
 import { Component, inject, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { IProduct } from '../../Models/iproduct';
 import { CommonModule } from '@angular/common';
+<<<<<<< HEAD
+=======
+import { ICategory } from '../../Models/icategory';
+>>>>>>> cfe63487fd06b2c2702019a4c9f6dcbaf7096945
 import { FormsModule } from '@angular/forms';
 import { ProductCard } from '../../Directives/product-card';
 import { CreditCardPipe } from "../../Pipes/credit-card-pipe";
@@ -16,6 +20,10 @@ import { Router, RouterModule } from '@angular/router';
 })
 export class Products implements OnChanges, OnInit {
 
+<<<<<<< HEAD
+=======
+  // inject()
+>>>>>>> cfe63487fd06b2c2702019a4c9f6dcbaf7096945
   private productService = inject(ProductService);
   private router = inject(Router);
   private cartservice = inject(Cartservice);
@@ -29,6 +37,7 @@ export class Products implements OnChanges, OnInit {
   Productlist: IProduct[] = [];
   filteredList: IProduct[] = [];
 
+<<<<<<< HEAD
   ngOnInit(): void {
 
     this.productService.GetAllProducts().subscribe({
@@ -39,6 +48,17 @@ export class Products implements OnChanges, OnInit {
       error: (err) => {
         console.error('Error fetching products', err);
       }
+=======
+  categoryMap: { [key: number]: string } = {};
+
+  ngOnInit(): void {
+
+    this.Productlist = this.productService.GetAllProducts();
+    this.filteredList = [...this.Productlist];
+
+    this.productService.GetCategories().forEach(cat => {
+    this.categoryMap[cat.ID] = cat.Name;
+>>>>>>> cfe63487fd06b2c2702019a4c9f6dcbaf7096945
     });
   }
 
@@ -60,12 +80,22 @@ export class Products implements OnChanges, OnInit {
     // Filter by product name if searchText is not empty
     if (this.searchText?.trim() !== '') {
       const text = this.searchText.toLowerCase();
+<<<<<<< HEAD
       tempList = tempList.filter(p => p.title.toLowerCase().includes(text));
     }
 
     // Filter by category if a category is selected
      if (this.selectedCategoryID) {
       tempList = tempList.filter(p => p.category.toLowerCase() === this.selectedCategoryID.toLowerCase());
+=======
+      tempList = tempList.filter(p => p.Name.toLowerCase().includes(text));
+    }
+
+    // Filter by category if a category is selected
+    if (this.selectedCategoryID) {
+      const catID = Number(this.selectedCategoryID);
+      tempList = tempList.filter(p => p.CategoryID === catID);
+>>>>>>> cfe63487fd06b2c2702019a4c9f6dcbaf7096945
     }
 
     this.filteredList = tempList;

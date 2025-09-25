@@ -12,8 +12,18 @@
     <div class="col-12 col-md-6">
       <select class="form-select border-success" [(ngModel)]="selectedCategoryID">
         <option value="">All Categories ..</option>
+<<<<<<< HEAD
         <option *ngFor="let cat of categories" [value]="cat">{{ cat }}</option>
       </select>
+=======
+
+        @for (cat of categories; track cat.ID)
+        {
+           <option [value]="cat.ID">{{ cat.Name }}</option>
+        }
+      </select>
+
+>>>>>>> cfe63487fd06b2c2702019a4c9f6dcbaf7096945
     </div>
   </div>
 </div>

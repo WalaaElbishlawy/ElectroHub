@@ -27,8 +27,12 @@
             "styles": [
               "src/styles.css",
                "node_modules/bootstrap/dist/css/bootstrap.min.css",
+<<<<<<< HEAD
                "node_modules/bootstrap-icons/font/bootstrap-icons.css",
                "node_modules/ngx-toastr/toastr.css"
+=======
+               "node_modules/bootstrap-icons/font/bootstrap-icons.css"
+>>>>>>> cfe63487fd06b2c2702019a4c9f6dcbaf7096945
             ],
             "scripts": [
               "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
