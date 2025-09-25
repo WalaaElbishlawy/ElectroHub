@@ -1,5 +1,6 @@
 # 🛒 ElectroHub – Angular 20 E-Commerce App
 
+
 ElectroHub is a modern and responsive Angular 20 e-commerce application. It allows users to browse products, search and filter by category, manage a shopping cart with live updates, and handle authentication (login/signup) with API integration.
 
 ## 🚀 Features

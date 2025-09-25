@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import { Component } from '@angular/core';
+>>>>>>> cfe63487fd06b2c2702019a4c9f6dcbaf7096945
+=======
+import { Component } from '@angular/core';
+>>>>>>> cfe63487fd06b2c2702019a4c9f6dcbaf7096945
 import { Routes } from '@angular/router';
 import { Home } from './Components/home/home';
 import { Products } from './Components/products/products';
@@ -8,8 +16,14 @@ import { ProductSearch } from './Components/product-search/product-search';
 import { Cart } from './Components/cart/cart';
 import { Register } from './Components/register/register';
 import { Login } from './Components/login/login';
+<<<<<<< HEAD
+<<<<<<< HEAD
 import { authGuard } from './Guards/auth-guard';
 import { guestGuardGuard } from './Guards/guest-guard-guard';
+=======
+>>>>>>> cfe63487fd06b2c2702019a4c9f6dcbaf7096945
+=======
+>>>>>>> cfe63487fd06b2c2702019a4c9f6dcbaf7096945
 
 export const routes: Routes = [
   {
@@ -19,6 +33,8 @@ export const routes: Routes = [
   },
   {
     path: 'register',
+<<<<<<< HEAD
+<<<<<<< HEAD
     component: Register,
     canActivate: [guestGuardGuard]
   },
@@ -26,12 +42,26 @@ export const routes: Routes = [
     path: 'login',
     component: Login,
     canActivate: [guestGuardGuard]
+=======
+=======
+>>>>>>> cfe63487fd06b2c2702019a4c9f6dcbaf7096945
+    component: Register
+  },
+  {
+    path: 'login',
+    component: Login
+<<<<<<< HEAD
+>>>>>>> cfe63487fd06b2c2702019a4c9f6dcbaf7096945
+=======
+>>>>>>> cfe63487fd06b2c2702019a4c9f6dcbaf7096945
   },
   {
     path: 'home',
     component: Home
   },
   {
+<<<<<<< HEAD
+<<<<<<< HEAD
     path: 'products',
     component: Products,
     canActivate: [authGuard]
@@ -50,6 +80,23 @@ export const routes: Routes = [
     path: 'products/:id',
     component: ProductDetails,
     canActivate: [authGuard]
+=======
+=======
+>>>>>>> cfe63487fd06b2c2702019a4c9f6dcbaf7096945
+    path: 'productSearch',
+    component: ProductSearch
+  },
+  {
+    path: 'cart',
+    component: Cart
+  },
+  {
+    path: 'products/:id',
+    component: ProductDetails
+<<<<<<< HEAD
+>>>>>>> cfe63487fd06b2c2702019a4c9f6dcbaf7096945
+=======
+>>>>>>> cfe63487fd06b2c2702019a4c9f6dcbaf7096945
   },
   {
     path: 'about',

@@ -10,6 +10,8 @@ export class Cartservice {
 
   AddToCart(product: IProduct)
   {
+<<<<<<< HEAD
+<<<<<<< HEAD
     if(product. stock >= 1)
     {
       product.stock--;
@@ -23,6 +25,26 @@ export class Cartservice {
       else
       {
         this.cartItems.push({...product, stock: 1});
+=======
+=======
+>>>>>>> cfe63487fd06b2c2702019a4c9f6dcbaf7096945
+    if(product. Quantity >= 1)
+    {
+      product.Quantity--;
+
+      const existingProduct = this.cartItems.find(p => p.ID=== product.ID);
+
+      if(existingProduct)
+      {
+        existingProduct.Quantity++
+      }
+      else
+      {
+        this.cartItems.push({...product, Quantity: 1});
+<<<<<<< HEAD
+>>>>>>> cfe63487fd06b2c2702019a4c9f6dcbaf7096945
+=======
+>>>>>>> cfe63487fd06b2c2702019a4c9f6dcbaf7096945
       }
     }
 
@@ -37,7 +59,15 @@ export class Cartservice {
   getTotal(): number {
 
     return this.cartItems.reduce(
+<<<<<<< HEAD
+<<<<<<< HEAD
       (sum, item) => sum + (item.price * item.stock),0);
+=======
+      (sum, item) => sum + (item.Price * item.Quantity),0);
+>>>>>>> cfe63487fd06b2c2702019a4c9f6dcbaf7096945
+=======
+      (sum, item) => sum + (item.Price * item.Quantity),0);
+>>>>>>> cfe63487fd06b2c2702019a4c9f6dcbaf7096945
   }
 
 }

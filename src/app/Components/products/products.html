@@ -1,6 +1,8 @@
 
 <div class="container">
   <div class="row g-4">
+<<<<<<< HEAD
+<<<<<<< HEAD
     @for (product of filteredList; track product.id)
     {
       <div class="col-12 col-sm-6 col-md-4">
@@ -15,6 +17,27 @@
             <p class="card-text mb-1"><strong>Card:</strong> {{ creditCardNumber | creditCard }}</p>
 
             @switch (product.stock) {
+=======
+=======
+>>>>>>> cfe63487fd06b2c2702019a4c9f6dcbaf7096945
+    @for (product of filteredList; track product.ID)
+    {
+      <div class="col-12 col-sm-6 col-md-4">
+        <div appProductCard class="card h-100 shadow-sm">
+          <img [src]="product.Img" class="card-img-top product-img" alt="{{ product.Name }}">
+          <div class="card-body text-center">
+            <h5 class="card-title text-primary"><strong>{{ product.Name }}</strong></h5>
+            <p class="card-text mb-1"><strong>Price:</strong> {{ product.Price | currency:'USD' }}</p>
+            <p class="card-text mb-1"><strong>Quantity:</strong> {{ product.Quantity }}</p>
+            <p class="card-text mb-1"><strong>Category:</strong>{{categoryMap[product.CategoryID]}}</p>
+            <p class="card-text mb-1"><strong>Date:</strong> {{ today | date:'fullDate' }}</p>
+            <p class="card-text mb-1"><strong>Card:</strong> {{ creditCardNumber | creditCard }}</p>
+
+            @switch (product.Quantity) {
+<<<<<<< HEAD
+>>>>>>> cfe63487fd06b2c2702019a4c9f6dcbaf7096945
+=======
+>>>>>>> cfe63487fd06b2c2702019a4c9f6dcbaf7096945
               @case (0) {
                 <p class="text-danger fw-bold">Out of stock</p>
               }
@@ -32,13 +55,29 @@
             <div class="d-flex gap-2">
               <button class="btn btn-success flex-fill mt-2"
                   (click)="buyProduct(product)"
+<<<<<<< HEAD
+<<<<<<< HEAD
                   [disabled]="product.stock === 0">
+=======
+                  [disabled]="product.Quantity === 0">
+>>>>>>> cfe63487fd06b2c2702019a4c9f6dcbaf7096945
+=======
+                  [disabled]="product.Quantity === 0">
+>>>>>>> cfe63487fd06b2c2702019a4c9f6dcbaf7096945
                   <i class="bi bi-cart4"></i>
                 Add To Cart
               </button>
 
               <button class="btn btn-secondary flex-fill mt-2"
+<<<<<<< HEAD
+<<<<<<< HEAD
                   (click)="goToDetails(product.id)">
+=======
+                  (click)="goToDetails(product.ID)">
+>>>>>>> cfe63487fd06b2c2702019a4c9f6dcbaf7096945
+=======
+                  (click)="goToDetails(product.ID)">
+>>>>>>> cfe63487fd06b2c2702019a4c9f6dcbaf7096945
                   <i class="bi bi-ticket-detailed"></i>
                 Details
               </button>
