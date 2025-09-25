@@ -75,8 +75,8 @@ cd ElectroHub
 
 ## 🎥 Demo
 
-- 🔗 Watch the demo on YouTube
+- 🔗 https://youtu.be/tIgyM598HME
 
-📌 About
+## 📌 About
 
 ElectroHub is a responsive e-commerce web application built with Angular 20, featuring API integration, cart management, and authentication for a complete shopping experience.
