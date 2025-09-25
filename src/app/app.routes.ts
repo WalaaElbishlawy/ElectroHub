@@ -1,4 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import { Component } from '@angular/core';
+>>>>>>> cfe63487fd06b2c2702019a4c9f6dcbaf7096945
 =======
 import { Component } from '@angular/core';
 >>>>>>> cfe63487fd06b2c2702019a4c9f6dcbaf7096945
@@ -13,8 +17,11 @@ import { Cart } from './Components/cart/cart';
 import { Register } from './Components/register/register';
 import { Login } from './Components/login/login';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { authGuard } from './Guards/auth-guard';
 import { guestGuardGuard } from './Guards/guest-guard-guard';
+=======
+>>>>>>> cfe63487fd06b2c2702019a4c9f6dcbaf7096945
 =======
 >>>>>>> cfe63487fd06b2c2702019a4c9f6dcbaf7096945
 
@@ -27,6 +34,7 @@ export const routes: Routes = [
   {
     path: 'register',
 <<<<<<< HEAD
+<<<<<<< HEAD
     component: Register,
     canActivate: [guestGuardGuard]
   },
@@ -35,11 +43,16 @@ export const routes: Routes = [
     component: Login,
     canActivate: [guestGuardGuard]
 =======
+=======
+>>>>>>> cfe63487fd06b2c2702019a4c9f6dcbaf7096945
     component: Register
   },
   {
     path: 'login',
     component: Login
+<<<<<<< HEAD
+>>>>>>> cfe63487fd06b2c2702019a4c9f6dcbaf7096945
+=======
 >>>>>>> cfe63487fd06b2c2702019a4c9f6dcbaf7096945
   },
   {
@@ -47,6 +60,7 @@ export const routes: Routes = [
     component: Home
   },
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
     path: 'products',
     component: Products,
@@ -67,6 +81,8 @@ export const routes: Routes = [
     component: ProductDetails,
     canActivate: [authGuard]
 =======
+=======
+>>>>>>> cfe63487fd06b2c2702019a4c9f6dcbaf7096945
     path: 'productSearch',
     component: ProductSearch
   },
@@ -77,6 +93,9 @@ export const routes: Routes = [
   {
     path: 'products/:id',
     component: ProductDetails
+<<<<<<< HEAD
+>>>>>>> cfe63487fd06b2c2702019a4c9f6dcbaf7096945
+=======
 >>>>>>> cfe63487fd06b2c2702019a4c9f6dcbaf7096945
   },
   {

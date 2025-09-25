@@ -2,6 +2,7 @@
 <div class="container">
   <div class="row g-4">
 <<<<<<< HEAD
+<<<<<<< HEAD
     @for (product of filteredList; track product.id)
     {
       <div class="col-12 col-sm-6 col-md-4">
@@ -17,6 +18,8 @@
 
             @switch (product.stock) {
 =======
+=======
+>>>>>>> cfe63487fd06b2c2702019a4c9f6dcbaf7096945
     @for (product of filteredList; track product.ID)
     {
       <div class="col-12 col-sm-6 col-md-4">
@@ -31,6 +34,9 @@
             <p class="card-text mb-1"><strong>Card:</strong> {{ creditCardNumber | creditCard }}</p>
 
             @switch (product.Quantity) {
+<<<<<<< HEAD
+>>>>>>> cfe63487fd06b2c2702019a4c9f6dcbaf7096945
+=======
 >>>>>>> cfe63487fd06b2c2702019a4c9f6dcbaf7096945
               @case (0) {
                 <p class="text-danger fw-bold">Out of stock</p>
@@ -50,7 +56,11 @@
               <button class="btn btn-success flex-fill mt-2"
                   (click)="buyProduct(product)"
 <<<<<<< HEAD
+<<<<<<< HEAD
                   [disabled]="product.stock === 0">
+=======
+                  [disabled]="product.Quantity === 0">
+>>>>>>> cfe63487fd06b2c2702019a4c9f6dcbaf7096945
 =======
                   [disabled]="product.Quantity === 0">
 >>>>>>> cfe63487fd06b2c2702019a4c9f6dcbaf7096945
@@ -60,7 +70,11 @@
 
               <button class="btn btn-secondary flex-fill mt-2"
 <<<<<<< HEAD
+<<<<<<< HEAD
                   (click)="goToDetails(product.id)">
+=======
+                  (click)="goToDetails(product.ID)">
+>>>>>>> cfe63487fd06b2c2702019a4c9f6dcbaf7096945
 =======
                   (click)="goToDetails(product.ID)">
 >>>>>>> cfe63487fd06b2c2702019a4c9f6dcbaf7096945

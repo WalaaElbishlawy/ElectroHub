@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { inject, Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
@@ -33,6 +34,8 @@ export class ProductService {
     return cat ? cat : '';
   }
 =======
+=======
+>>>>>>> cfe63487fd06b2c2702019a4c9f6dcbaf7096945
 import { Injectable } from '@angular/core';
 import { IProduct } from '../Models/iproduct';
 import { filter } from 'rxjs';
@@ -130,5 +133,8 @@ export class ProductService {
     return cat ? cat.Name : '';
   }
 
+<<<<<<< HEAD
+>>>>>>> cfe63487fd06b2c2702019a4c9f6dcbaf7096945
+=======
 >>>>>>> cfe63487fd06b2c2702019a4c9f6dcbaf7096945
 }

@@ -23,7 +23,10 @@
   "private": true,
   "dependencies": {
 <<<<<<< HEAD
+<<<<<<< HEAD
     "@angular/animations": "^20.3.1",
+=======
+>>>>>>> cfe63487fd06b2c2702019a4c9f6dcbaf7096945
 =======
 >>>>>>> cfe63487fd06b2c2702019a4c9f6dcbaf7096945
     "@angular/common": "^20.3.0",
@@ -36,7 +39,10 @@
     "bootstrap-icons": "^1.13.1",
     "lottie-web": "^5.13.0",
 <<<<<<< HEAD
+<<<<<<< HEAD
     "ngx-toastr": "^19.1.0",
+=======
+>>>>>>> cfe63487fd06b2c2702019a4c9f6dcbaf7096945
 =======
 >>>>>>> cfe63487fd06b2c2702019a4c9f6dcbaf7096945
     "rxjs": "~7.8.0",

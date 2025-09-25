@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Component, inject, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Products } from "../products/products";
@@ -27,6 +28,8 @@ export class ProductSearch implements OnInit {
       error: (err) => console.error('Error fetching categories', err)
     });
 =======
+=======
+>>>>>>> cfe63487fd06b2c2702019a4c9f6dcbaf7096945
 import { Component, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Products } from "../products/products";
@@ -49,6 +52,9 @@ export class ProductSearch {
 
   ngOnInit() {
     this.categories = this.productService.GetCategories();
+<<<<<<< HEAD
+>>>>>>> cfe63487fd06b2c2702019a4c9f6dcbaf7096945
+=======
 >>>>>>> cfe63487fd06b2c2702019a4c9f6dcbaf7096945
   }
 

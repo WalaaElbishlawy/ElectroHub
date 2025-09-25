@@ -22,8 +22,13 @@ export class Cart implements OnInit {
 
   onQuantityChange(cartItem: IProduct) {
 <<<<<<< HEAD
+<<<<<<< HEAD
   if (cartItem.stock < 0) {
     cartItem.stock = 0;
+=======
+  if (cartItem.Quantity < 0) {
+    cartItem.Quantity = 0;
+>>>>>>> cfe63487fd06b2c2702019a4c9f6dcbaf7096945
 =======
   if (cartItem.Quantity < 0) {
     cartItem.Quantity = 0;
@@ -45,7 +50,11 @@ export class Cart implements OnInit {
 
  trackById(index: number, item: IProduct): number {
 <<<<<<< HEAD
+<<<<<<< HEAD
     return item.id;
+=======
+    return item.ID;
+>>>>>>> cfe63487fd06b2c2702019a4c9f6dcbaf7096945
 =======
     return item.ID;
 >>>>>>> cfe63487fd06b2c2702019a4c9f6dcbaf7096945

@@ -1,5 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Component, EventEmitter, inject, Input, OnInit, Output } from '@angular/core';
+=======
+import { Component, EventEmitter, inject, Input, Output } from '@angular/core';
+>>>>>>> cfe63487fd06b2c2702019a4c9f6dcbaf7096945
 =======
 import { Component, EventEmitter, inject, Input, Output } from '@angular/core';
 >>>>>>> cfe63487fd06b2c2702019a4c9f6dcbaf7096945
@@ -25,10 +29,14 @@ export class ProductDetails {
   ngOnInit() {
     const id = Number(this.route.snapshot.paramMap.get('id'));
 <<<<<<< HEAD
+<<<<<<< HEAD
     this.productService.getProductByID(id).subscribe({
       next: (res) => this.product = res,
       error: (err) => console.error('Error fetching product details', err)
     });
+=======
+    this.product = this.productService.getProductByID(id);
+>>>>>>> cfe63487fd06b2c2702019a4c9f6dcbaf7096945
 =======
     this.product = this.productService.getProductByID(id);
 >>>>>>> cfe63487fd06b2c2702019a4c9f6dcbaf7096945

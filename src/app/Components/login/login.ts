@@ -1,9 +1,15 @@
 import { CommonModule } from '@angular/common';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Component, inject, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Router, RouterModule } from '@angular/router';
 import { Auth } from '../../Services/auth';
+=======
+import { Component } from '@angular/core';
+import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { RouterModule } from '@angular/router';
+>>>>>>> cfe63487fd06b2c2702019a4c9f6dcbaf7096945
 =======
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
@@ -16,6 +22,7 @@ import { RouterModule } from '@angular/router';
   templateUrl: './login.html',
   styleUrl: './login.css'
 })
+<<<<<<< HEAD
 <<<<<<< HEAD
 export class Login implements OnInit{
 
@@ -55,6 +62,8 @@ export class Login implements OnInit{
         }
      });
 =======
+=======
+>>>>>>> cfe63487fd06b2c2702019a4c9f6dcbaf7096945
 export class Login {
 
   loginForm: FormGroup;
@@ -84,6 +93,9 @@ export class Login {
     else {
       this.loginForm.markAllAsTouched();
     }
+<<<<<<< HEAD
+>>>>>>> cfe63487fd06b2c2702019a4c9f6dcbaf7096945
+=======
 >>>>>>> cfe63487fd06b2c2702019a4c9f6dcbaf7096945
   }
 
@@ -92,6 +104,9 @@ export class Login {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> cfe63487fd06b2c2702019a4c9f6dcbaf7096945
 =======
 >>>>>>> cfe63487fd06b2c2702019a4c9f6dcbaf7096945

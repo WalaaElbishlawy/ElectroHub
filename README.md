@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Day2
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.1.
@@ -59,6 +60,8 @@ Angular CLI does not come with an end-to-end testing framework by default. You c
 
 For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
 =======
+=======
+>>>>>>> cfe63487fd06b2c2702019a4c9f6dcbaf7096945
 #  🛒 ElectroHub – Angular 20 E-Commerce App
 
 ElectroHub is a responsive Angular 20 e-commerce application.
@@ -134,4 +137,7 @@ Clean architecture and reusable services.
   ## Demo
 
    https://youtu.be/Hjx8Bde0KRg
+<<<<<<< HEAD
+>>>>>>> cfe63487fd06b2c2702019a4c9f6dcbaf7096945
+=======
 >>>>>>> cfe63487fd06b2c2702019a4c9f6dcbaf7096945

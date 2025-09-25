@@ -10,15 +10,21 @@
           <div class="col-md-12 col-lg-8">
             <div class="items">
 <<<<<<< HEAD
+<<<<<<< HEAD
               @for (cartItem of CartItems; track cartItem.id) {
               <div class="row mb-3">
                 <div class="col-md-3">
                   <img class="mx-auto d-block image" [src]="cartItem.thumbnail" [alt]="cartItem.title" />
 =======
+=======
+>>>>>>> cfe63487fd06b2c2702019a4c9f6dcbaf7096945
               @for (cartItem of CartItems; track cartItem.ID) {
               <div class="row mb-3">
                 <div class="col-md-3">
                   <img class="mx-auto d-block image" [src]="cartItem.Img" [alt]="cartItem.Name" />
+<<<<<<< HEAD
+>>>>>>> cfe63487fd06b2c2702019a4c9f6dcbaf7096945
+=======
 >>>>>>> cfe63487fd06b2c2702019a4c9f6dcbaf7096945
                 </div>
                 <div class="col-md-8">
@@ -27,17 +33,23 @@
                       <div class="col-md-5 product-name">
                         <div class="product-name">
 <<<<<<< HEAD
+<<<<<<< HEAD
                           <a [routerLink]="['/productSearch']">{{ cartItem.title }}</a>
                           <div class="product-info">
                             <div>
                               Price:
                               <span class="value">{{ cartItem.price| currency }}</span>
 =======
+=======
+>>>>>>> cfe63487fd06b2c2702019a4c9f6dcbaf7096945
                           <a [routerLink]="['/productSearch']">{{ cartItem.Name }}</a>
                           <div class="product-info">
                             <div>
                               Price:
                               <span class="value">{{ cartItem.Price | currency }}</span>
+<<<<<<< HEAD
+>>>>>>> cfe63487fd06b2c2702019a4c9f6dcbaf7096945
+=======
 >>>>>>> cfe63487fd06b2c2702019a4c9f6dcbaf7096945
                             </div>
                           </div>
@@ -48,7 +60,11 @@
                         <input
                           type="number"
 <<<<<<< HEAD
+<<<<<<< HEAD
                           [(ngModel)]="cartItem.stock"
+=======
+                          [(ngModel)]="cartItem.Quantity"
+>>>>>>> cfe63487fd06b2c2702019a4c9f6dcbaf7096945
 =======
                           [(ngModel)]="cartItem.Quantity"
 >>>>>>> cfe63487fd06b2c2702019a4c9f6dcbaf7096945
@@ -59,7 +75,11 @@
                       </div>
                       <div class="col-md-3 price">
 <<<<<<< HEAD
+<<<<<<< HEAD
                         <span>{{ cartItem.price * cartItem.stock | currency }}</span>
+=======
+                        <span>{{ cartItem.Price * cartItem.Quantity | currency }}</span>
+>>>>>>> cfe63487fd06b2c2702019a4c9f6dcbaf7096945
 =======
                         <span>{{ cartItem.Price * cartItem.Quantity | currency }}</span>
 >>>>>>> cfe63487fd06b2c2702019a4c9f6dcbaf7096945

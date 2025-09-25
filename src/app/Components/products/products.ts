@@ -3,6 +3,10 @@ import { Component, inject, Input, OnChanges, OnInit, SimpleChanges } from '@ang
 import { IProduct } from '../../Models/iproduct';
 import { CommonModule } from '@angular/common';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import { ICategory } from '../../Models/icategory';
+>>>>>>> cfe63487fd06b2c2702019a4c9f6dcbaf7096945
 =======
 import { ICategory } from '../../Models/icategory';
 >>>>>>> cfe63487fd06b2c2702019a4c9f6dcbaf7096945
@@ -21,6 +25,10 @@ import { Router, RouterModule } from '@angular/router';
 export class Products implements OnChanges, OnInit {
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+  // inject()
+>>>>>>> cfe63487fd06b2c2702019a4c9f6dcbaf7096945
 =======
   // inject()
 >>>>>>> cfe63487fd06b2c2702019a4c9f6dcbaf7096945
@@ -38,6 +46,7 @@ export class Products implements OnChanges, OnInit {
   filteredList: IProduct[] = [];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   ngOnInit(): void {
 
     this.productService.GetAllProducts().subscribe({
@@ -49,6 +58,8 @@ export class Products implements OnChanges, OnInit {
         console.error('Error fetching products', err);
       }
 =======
+=======
+>>>>>>> cfe63487fd06b2c2702019a4c9f6dcbaf7096945
   categoryMap: { [key: number]: string } = {};
 
   ngOnInit(): void {
@@ -58,6 +69,9 @@ export class Products implements OnChanges, OnInit {
 
     this.productService.GetCategories().forEach(cat => {
     this.categoryMap[cat.ID] = cat.Name;
+<<<<<<< HEAD
+>>>>>>> cfe63487fd06b2c2702019a4c9f6dcbaf7096945
+=======
 >>>>>>> cfe63487fd06b2c2702019a4c9f6dcbaf7096945
     });
   }
@@ -81,6 +95,7 @@ export class Products implements OnChanges, OnInit {
     if (this.searchText?.trim() !== '') {
       const text = this.searchText.toLowerCase();
 <<<<<<< HEAD
+<<<<<<< HEAD
       tempList = tempList.filter(p => p.title.toLowerCase().includes(text));
     }
 
@@ -88,6 +103,8 @@ export class Products implements OnChanges, OnInit {
      if (this.selectedCategoryID) {
       tempList = tempList.filter(p => p.category.toLowerCase() === this.selectedCategoryID.toLowerCase());
 =======
+=======
+>>>>>>> cfe63487fd06b2c2702019a4c9f6dcbaf7096945
       tempList = tempList.filter(p => p.Name.toLowerCase().includes(text));
     }
 
@@ -95,6 +112,9 @@ export class Products implements OnChanges, OnInit {
     if (this.selectedCategoryID) {
       const catID = Number(this.selectedCategoryID);
       tempList = tempList.filter(p => p.CategoryID === catID);
+<<<<<<< HEAD
+>>>>>>> cfe63487fd06b2c2702019a4c9f6dcbaf7096945
+=======
 >>>>>>> cfe63487fd06b2c2702019a4c9f6dcbaf7096945
     }
 
