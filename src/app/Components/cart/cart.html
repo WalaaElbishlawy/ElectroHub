@@ -1,0 +1,79 @@
+<div class="container-fluid">
+  <section class="shopping-cart dark">
+    <div class="container">
+      <div class="block-heading">
+        <h2><strong>Shopping Cart </strong><i class="bi bi-cart4"></i></h2>
+      </div>
+      <div class="content">
+        <div class="row">
+          <!-- ✅ Cart Items -->
+          <div class="col-md-12 col-lg-8">
+            <div class="items">
+              @for (cartItem of CartItems; track cartItem.id) {
+              <div class="row mb-3">
+                <div class="col-md-3">
+                  <img class="mx-auto d-block image" [src]="cartItem.thumbnail" [alt]="cartItem.title" />
+                </div>
+                <div class="col-md-8">
+                  <div class="info">
+                    <div class="row">
+                      <div class="col-md-5 product-name">
+                        <div class="product-name">
+                          <a [routerLink]="['/productSearch']">{{ cartItem.title }}</a>
+                          <div class="product-info">
+                            <div>
+                              Price:
+                              <span class="value">{{ cartItem.price| currency }}</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-4 quantity">
+                        <label class="mb-2">Quantity:</label>
+                        <input
+                          type="number"
+                          [(ngModel)]="cartItem.stock"
+                          class="form-control quantity-input"
+                          [min]="0"
+                          (ngModelChange)="onQuantityChange(cartItem)"
+                        />
+                      </div>
+                      <div class="col-md-3 price">
+                        <span>{{ cartItem.price * cartItem.stock | currency }}</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              }
+            </div>
+          </div>
+
+          <!-- ✅ Cart Summary -->
+          <div class="col-md-12 col-lg-4">
+            <div class="summary">
+              <h3>Summary</h3>
+              <div class="summary-item">
+                <span class="text">Subtotal</span>
+                <span class="price">{{ getTotal() | currency }}</span>
+              </div>
+              <div class="summary-item">
+                <span class="text">Discount</span><span class="price">$0</span>
+              </div>
+              <div class="summary-item">
+                <span class="text">Shipping</span><span class="price">$0</span>
+              </div>
+              <div class="summary-item">
+                <span class="text">Total</span>
+                <span class="price">{{ getTotal() | currency }}</span>
+              </div>
+              <div class="text-center mt-3">
+                <button type="button" class="btn btn-success btn-lg custom-btn">Checkout</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

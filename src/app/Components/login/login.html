@@ -1,0 +1,106 @@
+<section class="vh-100">
+  <div class="container-fluid h-custom">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-md-9 col-lg-6 col-xl-5">
+        <img
+          src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/draw1.webp"
+          class="img-fluid"
+          alt="Sample image"
+        />
+      </div>
+      <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+          <div
+            class="d-flex flex-row align-items-center justify-content-center justify-content-lg-start"
+          >
+            <p class="lead fw-normal mb-0 me-3">Sign in with</p>
+            <button
+              type="button"
+              class="btn btn-success btn-sm rounded-circle shadow-sm me-2 button-color"
+            >
+              <i class="bi bi-facebook"></i>
+            </button>
+
+            <button
+              type="button"
+              class="btn btn-success btn-sm rounded-circle shadow-sm me-2 button-color"
+            >
+              <i class="bi bi-twitter"></i>
+            </button>
+
+            <button
+              type="button"
+              class="btn btn-success btn-sm rounded-circle shadow-sm me-2 button-color"
+            >
+              <i class="bi bi-linkedin"></i>
+            </button>
+          </div>
+
+          <div class="divider d-flex align-items-center my-4">
+            <p class="text-center fw-bold mx-3 mb-0">Or</p>
+          </div>
+
+          <!-- Email input -->
+          <div data-mdb-input-init class="form-outline mb-4">
+            <label class="form-label" for="email">User Name</label>
+            <input
+              type="username"
+              id="username"
+              formControlName="username"
+              class="form-control form-control-lg"
+            />
+            <div
+              class="text-danger"
+              *ngIf="
+                loginForm.controls['username'].touched && loginForm.controls['username'].invalid
+              "
+            >
+              Username is required
+            </div>
+          </div>
+
+          <!-- Password input -->
+          <div data-mdb-input-init class="form-outline mb-3">
+            <label class="form-label" for="password">Password</label>
+            <input
+              type="password"
+              id="password"
+              formControlName="password"
+              class="form-control form-control-lg"
+            />
+            <div
+              class="text-danger"
+              *ngIf="
+                loginForm.controls['password'].touched && loginForm.controls['password'].invalid">
+              Password is required
+            </div>
+          </div>
+
+          <div class="d-flex justify-content-between align-items-center">
+            <!-- Checkbox -->
+            <div class="form-check mb-0">
+              <input
+                class="form-check-input me-2"
+                type="checkbox"
+                id="remember"
+                formControlName="remember"
+              />
+              <label class="form-check-label" for="remmber"> Remember me </label>
+            </div>
+            <a href="#!" class="text-body">Forgot password?</a>
+          </div>
+
+          <div class="text-center text-lg-start mt-4 pt-2">
+            <button type="submit" class="btn btn-success btn-md px-4 me-2 button-color">
+              Log In
+            </button>
+            <p class="small fw-bold mt-2 pt-1 mb-0">
+              Don't have an account?
+              <a [routerLink]="['/register']" class="link-danger">Register</a>
+            </p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

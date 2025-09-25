@@ -1,0 +1,52 @@
+
+<div class="container">
+  <div class="row g-4">
+    @for (product of filteredList; track product.id)
+    {
+      <div class="col-12 col-sm-6 col-md-4">
+        <div appProductCard class="card h-100 shadow-sm">
+          <img [src]="product.thumbnail" class="card-img-top product-img" alt="{{ product.title }}">
+          <div class="card-body text-center">
+            <h5 class="card-title text-primary"><strong>{{ product.title }}</strong></h5>
+            <p class="card-text mb-1"><strong>Price:</strong> {{ product.price| currency:'USD' }}</p>
+            <p class="card-text mb-1"><strong>Quantity:</strong> {{ product.stock }}</p>
+            <p class="card-text mb-1"><strong>Category: </strong>{{ product.category }}</p>
+            <p class="card-text mb-1"><strong>Date:</strong> {{ today | date:'fullDate' }}</p>
+            <p class="card-text mb-1"><strong>Card:</strong> {{ creditCardNumber | creditCard }}</p>
+
+            @switch (product.stock) {
+              @case (0) {
+                <p class="text-danger fw-bold">Out of stock</p>
+              }
+              @case (1) {
+                <p class="text-warning fw-bold">Last one item!</p>
+              }
+              @case (2){
+                <p class="text-warning fw-bold">Last two item!</p>
+              }
+              @default {
+                <p class="text-success fw-bold">In stock</p>
+              }
+            }
+
+            <div class="d-flex gap-2">
+              <button class="btn btn-success flex-fill mt-2"
+                  (click)="buyProduct(product)"
+                  [disabled]="product.stock === 0">
+                  <i class="bi bi-cart4"></i>
+                Add To Cart
+              </button>
+
+              <button class="btn btn-secondary flex-fill mt-2"
+                  (click)="goToDetails(product.id)">
+                  <i class="bi bi-ticket-detailed"></i>
+                Details
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    }
+  </div>
+</div>
+
